@@ -1,0 +1,21 @@
+<div class="slide1 pure-g island">
+	<div class="pure-u-1 text-center">
+    	<div class="sub-box">
+    	<h1 class="title-text">{{ 'Music' | uppercase }}</h1>
+    	</div>
+	</div>
+</div>
+
+
+<div class="slide9 pure-g island" style="padding:2em 0em 0 0em;">
+	<div ng-repeat="object in music.art | orderBy:'-year'" class="island pure-u-1 pure-u-md-1-3 pure-u-lg-1-4" style="padding:0;">
+		<div class="art-box text-center">
+			<img class="pure-img album-art" ng-src="{{object.artwork.url}}">
+		</div>
+  	<div class="text-center">
+    		<p style="font-weight:400; font-size:0.8em;">{{object.title}} - {{object.subtitle}}</p>
+    		<p style="font-weight:300; font-size:0.8em;">{{object.content}}</p>
+        <p class="sm-text">{{object.year}}</p>
+  	</div>
+	</div>
+</div>

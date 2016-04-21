@@ -1,0 +1,27 @@
+
+
+<div class="slide1 pure-g">
+  <div class="pure-u-1 text-center">
+      <div class="sub-box">
+      <h1 class="title-text">{{'studio' | uppercase}}</h1>
+      <h2 class="sub-text">{{'London' | uppercase}}</h2>
+
+      </div>
+  </div>
+</div>
+
+<div class="slide10 pure-g"></div>
+
+<div class="pure-g island">
+  <div class="pure-u-1 text-center">
+    <h1 class="feature-text" style="color:white;"> PICTURES </h1>
+  </div>
+  <div ng-repeat="object in studio.pics" class="pure-u-1-2" >
+
+    <div class="text-center">
+      <img src="" ng-src="{{object.image.url}}" style="width:80%;">
+    </div>
+
+  </div>
+</div>
+

@@ -1,0 +1,120 @@
+//@import 'normalize';
+
+/* Fonts
+   ========================================================================== */
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
+html,
+button,
+input,
+select,
+textarea
+.pure-g [class *= "pure-u"] {
+  font-family: 'Open Sans', sans-serif;
+
+}
+/* Defaults
+   ========================================================================== */
+
+html {
+  @include font-size($base-root-size);
+  line-height: 1.5;
+  background:$black;
+}
+::-moz-selection {
+
+  @include selection();
+}
+::selection {
+
+  @include selection();
+}
+::-webkit-input-placeholder {
+
+  @include placeholder();
+}
+::-moz-placeholder {
+
+  @include placeholder();
+}
+:-ms-input-placeholder {
+  @include placeholder();
+
+}
+
+*{
+  font-family: 'Quicksand', sans-serif;
+}
+
+img.pure-img {
+  vertical-align: middle;
+  max-width: 60%;
+  display: inline;
+}
+
+p{
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+h3 {
+  font-weight: normal;
+  @include font-size(22);
+}
+
+h4 {
+  @include font-size(21);
+}
+
+.pure-menu.pure-menu-horizontal {
+  background:rgba(10,10,10,0.9);
+
+  > ul > li > a.pure-button:hover,a.pure-button:focus{
+    background:none;
+    border:none;
+  }
+  >ul>li>a{
+    padding:0.5em;
+  }
+}
+
+a {
+  color: $gray;
+  text-decoration: none;
+  line-height: inherit;
+  -o-transition:color .35s ease-out;
+  -ms-transition:color .35s ease-out;
+  -moz-transition:color .35s ease-out;
+  -webkit-transition:color .35s ease-out;
+  transition:color .35s ease-out;
+}
+
+a:focus,
+a:hover {
+  color: $orange;
+  border:none;
+  outline:none;
+}
+
+a.pure-button{
+  background:none;
+  border:none;
+}
+
+li.pure-menu-selected a.pure-button{
+  color:$orange;
+}
+
+li.pure-menu-selected a.pure-button:hover, a.pure-button:focus{
+    color:lighten($orange, 20);
+}
+
+a.pure-button:focus,
+a.pure-button:hover {
+  color: $white;
+  border:none;
+}
+
+.pure-button:active {
+    box-shadow: none;
+    border:none;
+}
