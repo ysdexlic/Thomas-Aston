@@ -10,7 +10,7 @@
   "bugs": "",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ysdexlic/thomas-aston.git"
+    "url": "git@github.com:ysdexlic/Thomas-Aston.git"
   },
   "devDependencies": {
     "browser-sync": "~2.7.1",
