@@ -46,7 +46,10 @@
     */
   }
 
-  angular.module('home', [])
+  angular.module('home',
+    [
+      'duParallax'
+    ])
     .config(config)
     .controller('HomeCtrl', HomeCtrl);
 })();

@@ -23,6 +23,7 @@
    * @description Controller
    */
   function PortfolioCtrl() {
+
     //var docs = this;
     /*
     basicFactory.getAll('Audio').success(function(data){
@@ -31,7 +32,10 @@
     */
   }
 
-  angular.module('portfolio', [])
+  angular.module('portfolio',
+    [
+      'duParallax'
+    ])
     .config(config)
     .controller('PortfolioCtrl', PortfolioCtrl);
 })();

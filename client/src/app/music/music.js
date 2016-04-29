@@ -24,9 +24,9 @@
    * @description Controller
    */
   function MusicCtrl(basicFactory) {
-    var docs = this;
+    var vm = this;
     basicFactory.getAll('Art').success(function(data){
-        docs.art=data.results;
+        vm.art=data.results;
     });
   }
 

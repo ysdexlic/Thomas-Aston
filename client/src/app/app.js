@@ -24,13 +24,16 @@
       });
   }
 
-  function MainCtrl($scope, $window, $log) {
+  function MainCtrl($scope, $window, $log, parallaxHelper) {
 
     $log.debug('MainCtrl loaded');
     // on scope change, scroll to top of page
     $scope.$on('$viewContentLoaded', function () {
       $window.scrollTo(0, 0);
     });
+
+    $scope.background = parallaxHelper.createAnimator(-0.4);
+
   }
 
   function run($log) {
@@ -42,6 +45,8 @@
       'ui.router',
       'ui.bootstrap',
       'ngAnimate',
+      'duParallax',
+      'duScroll',
       'home',
       'portfolio',
       'music',
