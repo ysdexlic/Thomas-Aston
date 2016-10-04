@@ -1,17 +1,23 @@
 
 .slide1{
-	color:$white;
-	padding-bottom: 15em;
+	color: $white;
+  height: 42em;
 	background-size: cover;
+  background-position: center center;
   overflow: hidden;
 }
+
 .paraImage{
-  padding: 10.3em 0 7.5em 0;
-  transform: translate3d(0px, 75px, 0px);
+  position: relative;
+  z-index: -10;
+  margin: -50%;
+  width:100%;
+  padding: 0 0 20em 0;
+  //transform: translate3d(0px, 48px, 0px);
+  overflow: hidden;
 }
 
 .slide2{
-	padding:0 0 0.5em 0;
 	border-top: 0 solid $gray;
 	border-bottom: 0 solid $gray;
 	background-color: $black;
@@ -23,15 +29,16 @@
 }
 
 .slide3{
+  padding: 5em 0 5em 0;
 	color: $white;
-  margin-bottom: 5em;
 	background-size: cover;
+  overflow: hidden;
 }
 
 
 .slide4{
+  padding: 5em 0 5em 0;
 	color: $white;
-	padding: 0;
   background-size: cover;
   overflow: hidden;
 }
@@ -57,3 +64,32 @@
 		margin-bottom:0;
 	}
 }
+
+
+.para-stuff {
+  width: 100%;
+  z-index: -999;
+  margin-top: -10%;
+
+  height: 870px;
+
+  background: url(../../../assets/images/tom-bw3.png) no-repeat center center / cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+
+}
+
+.parallax-container {
+  width:100%;
+  height: 100%;
+}
+
+.para-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 35%;
+}
+
+

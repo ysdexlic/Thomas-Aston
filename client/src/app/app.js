@@ -5,9 +5,9 @@
     angular.bootstrap(document, ['app']);
   });
 
-  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider) {
+  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
-    $logProvider.debugEnabled(true);
+    $logProvider.debugEnabled(false);
     $httpProvider.interceptors.push('httpInterceptor');
     $stateProvider
       .state('root', {
@@ -22,22 +22,29 @@
           }
         }
       });
+
+
   }
 
   function MainCtrl($scope, $window, $log, parallaxHelper) {
 
+
     $log.debug('MainCtrl loaded');
+
+
     // on scope change, scroll to top of page
     $scope.$on('$viewContentLoaded', function () {
       $window.scrollTo(0, 0);
+      $scope.background = parallaxHelper.createAnimator(-0.4);
     });
 
-    $scope.background = parallaxHelper.createAnimator(-0.4);
 
+    //$scope.xAxis = 0;
   }
 
   function run($log) {
     $log.debug('App is running');
+
 
   }
 
@@ -46,17 +53,15 @@
       'ui.bootstrap',
       'ngAnimate',
       'duParallax',
+      'mrResponsiveParallax',
       'duScroll',
       'home',
       'portfolio',
-      'music',
-      'videos',
       'studio',
       'contact',
       'common.header',
       'common.footer',
       'common.services.data',
-      'common.services.services',
       'common.directives.version',
       'common.directives.bgImg',
       'common.controllers.controllers',
@@ -64,7 +69,8 @@
       'common.filters.trustedAudioUrl',
       'common.filters.trustedHtml',
       'common.interceptors.http',
-      'templates'
+      'templates',
+      'bootstrapLightbox'
     ])
     .config(config)
     .run(run)

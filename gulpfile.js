@@ -38,7 +38,6 @@ gulp.task('travis', ['build'], function(cb) {
 
 // optimize images and put them in the dist folder
 gulp.task('images', function() {
-  /*
   return gulp.src(config.images)
     .pipe($.imagemin({
       progressive: true,
@@ -48,7 +47,7 @@ gulp.task('images', function() {
     .pipe($.size({
       title: 'images'
     }));
-    */
+
 });
 
 //generate angular templates using html2js
